@@ -2,12 +2,15 @@ package dycs.bankaccounts.application.assembler;
 
 import java.util.List;
 
+
 import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 import org.modelmapper.TypeToken;
 import org.modelmapper.spi.MappingContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import dycs.bankaccounts.application.dto.ProyectoCreateDto;
 import dycs.bankaccounts.domain.entity.Proyecto;
 import dycs.common.domain.valueobject.Money;
@@ -15,6 +18,7 @@ import dycs.common.domain.valueobject.MoneyAbstraction;
 import dycs.common.infrastructure.persistence.hibernate.UnitOfWorkHibernate;
 import dycs.customers.domain.entity.Cliente;
 
+@Component
 public class ProyectoCreateAssembler {
 	@Autowired
 	protected UnitOfWorkHibernate unitOfWork;

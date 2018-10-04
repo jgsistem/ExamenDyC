@@ -2,6 +2,7 @@ package dycs.bankaccounts.application.dto;
 
 import java.math.BigDecimal;
 
+
 public class ProyectoCreateDto {
 	
 	private long id;	
@@ -10,6 +11,7 @@ public class ProyectoCreateDto {
 	private String number;
 	private BigDecimal balance;
 	private long cliente_id;
+	
 	public long getId() {
 		return id;
 	}
