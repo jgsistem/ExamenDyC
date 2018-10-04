@@ -47,8 +47,4 @@ public class ProyectoCreateDto {
 		this.cliente_id = cliente_id;
 	}
 	
-	
-	
-	
-
 }

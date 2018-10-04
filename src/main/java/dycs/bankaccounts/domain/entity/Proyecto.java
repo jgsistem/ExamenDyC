@@ -14,9 +14,6 @@ public class Proyecto {
 	private boolean isLocked;
 	private Cliente cliente;
 	
-	
-	
-	
 	public Proyecto() {
 		
 	}

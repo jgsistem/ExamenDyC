@@ -40,7 +40,7 @@ public class ProyectoCreateAssembler {
 		    	ProyectoCreateDto proyectoCreateDto =  ProyectoCreateDto.class.cast(context.getSource());
 		    	MoneyAbstraction balance = new Money(proyectoCreateDto.getBalance(), proyectoCreateDto.getNumber());
 		    	Proyecto proyecto = new Proyecto();
-		    	//proyecto.setId(proyectoCreateDto.getId());
+		    	//proyecto.setId(proyectoCreateDto.getId());		    	
 		    	proyecto.setPais(proyectoCreateDto.getPais());
 		    	proyecto.setNumber(proyectoCreateDto.getNombre());
 		    	proyecto.setBalance(balance);
@@ -58,6 +58,9 @@ public class ProyectoCreateAssembler {
 		  protected void configure() {
 			map().setNumber(source.getNumber());
 		    map().setBalance(source.getBalance().getAmount());
+		    map().setPais(source.getPais());
+		    map().setCliente_id(source.getCliente().getId());
+		    map().setNombre(source.getNombre());
 		   // map().setCurrency(source.getBalance().getCurrencyAsString());
 		  //  map().setLocked(source.getIsLocked());
 		   // map().setCustomerId(source.getCustomer().getId());
