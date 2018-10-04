@@ -8,4 +8,3 @@ CREATE TABLE cliente (
   INDEX IX_cliente_last_first_name(last_name, first_name)
 ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO cliente(cliente_id, first_name, last_name,rol, active) VALUES('1', 'Royal','Verdales', 'Owner', 1);

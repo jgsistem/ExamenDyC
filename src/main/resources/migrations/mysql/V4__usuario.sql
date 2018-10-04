@@ -10,4 +10,3 @@ CREATE TABLE usuario (
   INDEX IX_usuario_last_first_name(last_name, first_name)  
 ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO usuario(usuario_id, first_name, last_name,rol,usuario, clave,active) VALUES('1', 'Gustavo','Osorio', 'Owner','jg','123', 1);
