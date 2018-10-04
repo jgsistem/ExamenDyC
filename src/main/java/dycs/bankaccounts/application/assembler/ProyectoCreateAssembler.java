@@ -61,9 +61,8 @@ public class ProyectoCreateAssembler {
 		    map().setPais(source.getPais());
 		    map().setCliente_id(source.getCliente().getId());
 		    map().setNombre(source.getNombre());
-		   // map().setCurrency(source.getBalance().getCurrencyAsString());
-		  //  map().setLocked(source.getIsLocked());
-		   // map().setCustomerId(source.getCustomer().getId());
+		   // map().setBalance(source.getBalance().getAmount());
+		 //   map().setCurrency(source.getBalance().getCurrencyAsString());		    
 		  }
 		};
 		modelMapper.addMappings(map);
