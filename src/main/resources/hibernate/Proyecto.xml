@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="dycs.bankaccounts.domain.entity" default-access="field">
+	<class name="Proyecto" table="proyecto">
+        <id name="id" column="proyecto_id">
+            <generator class="native"/>
+        </id>
+         <property name="nombre" column="nombre" not-null="true" />
+           <property name="pais" column="pais" not-null="true" />          
+       <property name="number" column="number" not-null="true" /> 
+        <component name="balance" class="dycs.common.domain.valueobject.Money">
+        	<property name="amount" column="balance" not-null="true"/>
+        	<property name="currency" column="currency" not-null="true" />
+        </component>
+        <property name="isLocked" column="locked" />
+        <many-to-one name="cliente" class="dycs.customers.domain.entity.Cliente" column="cliente_id" not-null="true"/>
+    </class> 
+</hibernate-mapping>
